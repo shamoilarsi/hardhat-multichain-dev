@@ -23,7 +23,7 @@ Multichain Hardhat Development is a vscode extension that simplifies the process
        {
            "name": "Goerli",
            "chainId": 5,
-           "port": 1000 // port should be empty
+           "port": 1000, // port should be empty
            "url": "https://rpc.url.com/yoururl", // RPC URL to interact with the chain
        }, {
            "name": "Hardhat",
