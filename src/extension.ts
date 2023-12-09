@@ -102,6 +102,7 @@ export function activate(context: vscode.ExtensionContext) {
         );
       }
       fs.writeFileSync(hardhatConfigPath, hardhatConfigWithExtendEnvironment);
+      vscode.window.showInformationMessage("Multichain networks running...");
     }
   );
 
