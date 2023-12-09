@@ -5,15 +5,11 @@ import fs from "fs";
 
 let terminals = [] as vscode.Terminal[];
 export function activate(context: vscode.ExtensionContext) {
-  console.log(
-    'Congratulations, your extension "hardhat-multichain-dev" is now active!'
-  );
-
   let disposable = vscode.commands.registerCommand(
     "hardhat-multichain-dev.init",
     async () => {
       const workspaceFolders = vscode.workspace.workspaceFolders;
-      console.log(workspaceFolders);
+
       if (!workspaceFolders || workspaceFolders.length === 0) {
         vscode.window.showErrorMessage(
           "open a workspace with hardhat config to continue."
