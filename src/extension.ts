@@ -21,11 +21,11 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       const workspaceFolderUri = workspaceFolders[0].uri;
-      const chainsConfigExpectedPath = `${workspaceFolderUri.fsPath}/hardhat-chains.config.json`;
+      const chainsConfigExpectedPath = `${workspaceFolderUri.fsPath}/multichain.config.json`;
 
       if (!fs.existsSync(chainsConfigExpectedPath)) {
         vscode.window.showErrorMessage(
-          "hardhat-chains.config.json file not found. create it in the root of the workspace and populate it with the chain configs"
+          "multichain.config.json file not found. create it in the root of the workspace and populate it with the chain configs"
         );
         return;
       }
